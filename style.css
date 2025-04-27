@@ -1,0 +1,96 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+/* Heading */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input field */
+input[type="text"] {
+    padding: 12px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Button */
+button {
+    padding: 12px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e91e63;
+}
+
+/* Results Box */
+#simSuggestions {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+/* Responsive Text */
+#simSuggestions p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}

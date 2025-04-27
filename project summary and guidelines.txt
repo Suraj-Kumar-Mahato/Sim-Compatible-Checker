@@ -1,0 +1,44 @@
+Project Summary: SIM Compatibility Checker
+
+This project aims to help users determine which SIM card providers are most suitable for their region, based on network connectivity, data prices, and availability. The application combines a backend C++ program, a Flask web server, and a user-friendly frontend to deliver region-specific SIM suggestions.
+
+Key Features:
+C++ Backend: The C++ program evaluates the network connectivity of various SIM providers (e.g., Verizon, Vodafone, T-Mobile) by assigning a rating based on the provider’s service quality. It also categorizes data prices as "Cheap", "Average", or "Expensive".
+
+Location-Based SIM Suggestions: Users enter their location (continent, country, or city) to receive a list of SIM providers with details on their network connectivity and data prices. The program provides personalized recommendations based on location-specific data.
+
+Frontend Interface: The frontend, built with HTML, CSS, and JavaScript, allows users to input their location and receive SIM provider suggestions in a clean, responsive interface. The form dynamically submits data to the backend without reloading the page.
+
+Flask Web Server: Flask serves as the backend framework, handling requests, running the C++ program with user input, and returning the processed results to the frontend. It also serves static files (HTML, CSS, JS).
+
+Integration: The C++ logic for evaluating SIM providers is integrated with the web application, allowing real-time SIM compatibility checks for users based on their region.
+🔐 Security Features Added
+✅ Basic API key check (X-API-Key header)
+
+✅ Validates if location is provided
+
+✅ Uses subprocess.run() safely
+
+✅ Returns consistent JSON error messages
+
+
+
+
+
+Use Cases:
+Travelers: Travelers can check which SIM provider will offer the best coverage and data rates in their destination region.
+
+Local Residents: Users can compare different SIM providers available in their country or city to make informed decisions about which network offers the best service and value.
+
+This project is designed to be a practical tool for anyone looking to assess SIM card options based on location, offering insights into network reliability and data pricing across a wide range of regions worldwide.
+
+
+how to run 
+open powershell
+g++ process_location.cpp -o process_location.exe
+sqlite3 sim_data.db
+CREATE TABLE sims (id INTEGER PRIMARY KEY, sim_name TEXT, region TEXT);
+INSERT INTO sims (sim_name, region) VALUES ('Airtel', 'Bhubaneswar');
+INSERT INTO sims (sim_name, region) VALUES ('Jio', 'Bhubaneswar');
+.exit
+python app.py

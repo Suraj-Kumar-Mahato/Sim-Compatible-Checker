@@ -1,0 +1,1 @@
+your Flask app is more resilient against various security threats such as unauthorized access, DDoS attacks, and data tampering. You can further improve security by ensuring your C++ code is well-validated for malicious inputs and by following good development practices like input sanitization and database encryption.
